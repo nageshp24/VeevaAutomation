@@ -28,6 +28,7 @@ public class TestCase1_Steps {
            logger = LoggerUtil.getLogger();
     }
     Core_Product_HomePage HomePage=new Core_Product_HomePage(driver);
+    // Going to home page
     @Given("user on the CP home page")
     public void user_on_the_cp_home_page() {
         // Write code here that turns the phrase above into concrete actions
@@ -37,6 +38,7 @@ public class TestCase1_Steps {
         logger.info("user on the CP home page");
 
     }
+    // Navigating to Mens jackets
     @When("user navigate to the Shop Menu and select Men's Jackets")
     public void user_navigate_to_the_shop_menu_and_select_men_s_jackets() throws InterruptedException {
         //wait
@@ -50,6 +52,7 @@ public class TestCase1_Steps {
         HomePage.clickMensMenu();
         logger.info("select Men's Jackets");
     }
+    // Store thedata to text file
     @Then("user store each Jacket Price, Title and Top Seller message to a text file")
     public void user_store_each_jacket_price_title_and_top_seller_message_to_a_text_file() throws InterruptedException {
         Core_Product_MensPage MensPage=new Core_Product_MensPage(driver);
